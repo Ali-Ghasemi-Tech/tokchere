@@ -5,6 +5,7 @@ module.exports = {
     
     
     extend: {
+      
       fontFamily:{
         lalezar: ['lalezar']
       },
@@ -13,7 +14,8 @@ module.exports = {
       },fontSize:{
         link: "clamp(0.8em , 4vw , 1.3em)",
         title: "clamp(1em , 5vw , 1.5em)",
-        default: "clamp(1em, 4vw , 1.2em)"
+        default: "clamp(1em, 4vw , 1.2em)",
+        hero: "clamp(1rem,  15vw, 5rem)"
       },
     },
   },

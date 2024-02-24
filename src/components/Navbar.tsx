@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ReactComponent as Menu } from "../assets/menu.svg";
-import { ReactComponent as Close } from "../assets/right-arrow.svg";
+import { ReactComponent as Menu } from "../assets/svgs/menu.svg";
+import { ReactComponent as Close } from "../assets/svgs/right-arrow.svg";
 function Navbar() {
   let [menuActice , setMenuActive] = useState(false);
   function menuToggle() {
@@ -19,7 +19,7 @@ function Navbar() {
         
       </div>
 
-      <div className={` transition-all ease-in-out duration-300 fixed top-0 right-0 bottom-0 flex flex-col pl-[10vw] pt-[8vw] border-l bg-white border-black border-opacity-50 text-default z-20 ${menuActice? 'translate-x-0': 'translate-x-full' } `}>
+      <div className={` transition-all ease-in-out duration-300 fixed top-0 right-0 bottom-0 flex flex-col pl-[10vw] pt-[8vw] border-l bg-white border-black border-opacity-30 text-default z-20 ${menuActice? 'translate-x-0': 'translate-x-full' } `}>
         <div onClick={menuToggle} className=" absolute top-0 right-0 w-[7vw] h-[6vw] mt-[1vw] mr-[1vw]"><Close /></div>
         <ul className="flex flex-col text-gray-600">
           <li className="border-b border-black  p-[2vw] flex justify-end border-opacity-50">ورود/ثبت نام</li>
@@ -27,7 +27,7 @@ function Navbar() {
           <li className="flex justify-end p-[2vw]">سبد خرید</li>
         </ul>
       </div>
-      <div onClick={menuToggle} className={`${menuActice ? 'translate-x-0' : "translate-x-full"} transition-all ease-in-out duration-100 fixed inset-0 bg-black bg-opacity-20`}></div>
+      <div onClick={menuToggle} className={`${menuActice ? 'translate-x-0' : "translate-x-full"} transition-all ease-in-out duration-100 fixed inset-0 bg-black bg-opacity-20 z-10`}></div>
     </nav>
   )
 }

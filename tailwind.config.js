@@ -12,10 +12,10 @@ module.exports = {
       colors:{
       main: "#FA9457"
       },fontSize:{
-        link: "clamp(0.8em , 4vw , 1.3em)",
-        title: "clamp(1em , 5vw , 1.5em)",
-        default: "clamp(1em, 4vw , 1.2em)",
-        hero: "clamp(1rem,  15vw, 5rem)"
+        link: "clamp(0.6em , 4vw , 1.2em)",
+        title: "clamp(0.8em , 5vw , 1.5em)",
+        default: "clamp(0.8em, 4vw , 1em)",
+        hero: "clamp(1rem,  10vw, 7rem)"
       },
     },
   },

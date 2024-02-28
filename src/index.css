@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --main: #FA9457
+}
+
 .rtl{
   direction: rtl;
 }
 .ltr{
   direction: ltr;
+}
+.text-border{
+  text-shadow: -1px 1px 0 var(--main),
+      1px 1px 0 var(--main),
+      1px -1px 0 var(--main),
+      -1px -1px 0 var(--main);
 }

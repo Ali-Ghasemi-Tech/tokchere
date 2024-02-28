@@ -11,7 +11,6 @@ function App() {
       <div className='sm:w-[70%] w-full flex flex-col'>
         <Hero/>
         <SpecialOffers/>
-        <ProductCard/>
       </div>
       
     </div>

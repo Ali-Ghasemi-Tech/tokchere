@@ -1,19 +1,11 @@
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import ProductCard from "./ProductCard";
-import React from "react";
-interface Appprops {
-  imageUrl: string;
-  price: number;
-  off: number;
-  style: string;
-}
+import MostSoldCard from "./MostSoldCard";
 
 interface ProductListProps {
-  productList: { name: string; imageUrl: string; price: number; off: number }[];
+  productList: { name: string; imageUrl: string; price: number }[];
 }
 
-const SpecialOffers: React.FC<ProductListProps> = ({ productList }) => {
+const MostSold: React.FC<ProductListProps> = ({ productList }) => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1920 },
@@ -32,31 +24,32 @@ const SpecialOffers: React.FC<ProductListProps> = ({ productList }) => {
       items: 3,
     },
   };
+
   return (
-    <div className="h-auto my-[5vw] bg-main rounded-sm">
+    <div className="h-auto mb-[5vw] bg-main rounded-sm">
       <Carousel
-        rtl={true}
-        responsive={responsive}
         swipeable={true}
+        rtl={false}
         draggable={true}
         removeArrowOnDeviceType={"mobile"}
+        responsive={responsive}
       >
         <div className="flex w-[90%] m-auto justify-center items-center h-full">
           <span className="w-full  text-lalezar text-slider text-shadow-default shadow-slate-500 text-white font-bold text-center">
-            پیشنهاد‌های ویژه
+            پرفروش‌ها
           </span>
         </div>
         {productList.map((product, index) => {
           return (
-            <ProductCard
+            <MostSoldCard
+              name={product.name}
               image={product.imageUrl}
               price={product.price}
-              off={product.off}
               style={
                 index === 0
-                  ? "rounded-r-lg"
-                  : index === productList.length - 1
                   ? "rounded-l-lg"
+                  : index === productList.length - 1
+                  ? "rounded-r-lg"
                   : ""
               }
             />
@@ -67,4 +60,4 @@ const SpecialOffers: React.FC<ProductListProps> = ({ productList }) => {
   );
 };
 
-export default SpecialOffers;
+export default MostSold;

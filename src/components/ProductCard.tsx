@@ -1,5 +1,4 @@
 import '../index.css'
-import kiwi from '../assets/images/kiwi.png'
 interface Appprops {
   image : string;
   price: number;
@@ -9,13 +8,12 @@ interface Appprops {
 }
 
 const ProductCard : React.FC<Appprops> = ({image , price , off , style })=>{
-  console.log(image)
   return (
-    <div className={`w-[90%] md:my-[1vw] my-[2vw] flex flex-col m-auto justify-between items-center bg-white border-2 ${style}`}>
+    <div className={`w-[90%] h-fit pb-[1vw] sm:my-[1vw] my-[3vw] flex flex-col m-auto justify-between items-center bg-white border-2 ${style}`}>
       <div className="flex justify-center items-center">
-        <img className="p-[1vw] w-[80%] " src={image} alt="" />
+        <img className="p-[1vw] h-[25vw] xs:h-[20vw] sm:h-[13vw] md:h-[12vw] object-cover" src={image} alt="" />
       </div>
-      <div className="flex flex-row-reverse justify-evenly px-[ 2vw] md:px-0 text-nowrap">
+      <div className="flex flex-row-reverse gap-[1vw] text-nowrap">
         <div className="flex flex-col items-start text-price font-lalezar">
           <span className="flex flex-row-reverse gap-[0.5vw]"><span>تومان</span> {price * 1-(off/100)} </span>
           <span className=" line-through opacity-70">{price}</span>

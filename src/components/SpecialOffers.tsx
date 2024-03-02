@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ProductCard from "./ProductCard";
 import React from "react";
+import SpecialOfferCard from "./SpecialOfferCard";
 interface Appprops {
   imageUrl: string;
   price: number;
@@ -33,7 +33,7 @@ const SpecialOffers: React.FC<ProductListProps> = ({ productList }) => {
     },
   };
   return (
-    <div className="h-auto my-[5vw] bg-main rounded-sm">
+    <div className="h-auto sm:my-[5vw] my-[8vw] bg-main rounded-sm">
       <Carousel
         rtl={true}
         responsive={responsive}
@@ -48,7 +48,7 @@ const SpecialOffers: React.FC<ProductListProps> = ({ productList }) => {
         </div>
         {productList.map((product, index) => {
           return (
-            <ProductCard
+            <SpecialOfferCard
               image={product.imageUrl}
               price={product.price}
               off={product.off}

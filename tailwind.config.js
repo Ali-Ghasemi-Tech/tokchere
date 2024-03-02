@@ -29,7 +29,9 @@ module.exports = {
         hero: "clamp(2.5em,  10vw, 7em)",
         numbers: "clamp(0.5em , 1.2vw , 0.8em)",
         price: "clamp(0.5em , 1.2vw , 1em)",
-        slider: "clamp(1em , 2.5vw , 3em)"
+        slider: "clamp(1em , 2.5vw , 3em)",
+        contentTitle: "clamp(1.2em , 4vw , 3em)",
+        contentText: "clamp(1em , 3vw , 1.2em)"
       },
     },
   },

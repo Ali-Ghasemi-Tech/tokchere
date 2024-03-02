@@ -2,22 +2,27 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import SpecialOffers from "./components/SpecialOffers";
-import ProductCard from "./components/ProductCard";
+import ProductCard from "./components/SpecialOfferCard";
 import { specialProducts } from "./products/specialProducts";
 import { mostSoldProduct } from "./products/mostSoldProduct";
+import Content  from "./components/Content";
 import MostSold from "./components/MostSold";
 
 function App() {
   return (
-    <div className="flex flex-col items-center h-screen">
+    <div className="flex flex-col items-center h-fit pb-[10vw]">
       <Navbar />
       <div className="sm:w-[70%] w-full flex flex-col">
         <Hero />
-        <div className="flex flex-col ">
+        <section className="flex flex-col ">
           <SpecialOffers productList={specialProducts} />
           <MostSold productList={mostSoldProduct} />
-        </div>
+        </section>
+        <section className="w-full">
+        <Content/>
+      </section>
       </div>
+      
     </div>
   );
 }

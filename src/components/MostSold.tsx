@@ -26,7 +26,7 @@ const MostSold: React.FC<ProductListProps> = ({ productList }) => {
   };
 
   return (
-    <div className="h-auto mb-[5vw] bg-main rounded-sm">
+    <div className="h-auto md:mb-[5vw] mb-[10vw] bg-main rounded-sm">
       <Carousel
         swipeable={true}
         rtl={false}

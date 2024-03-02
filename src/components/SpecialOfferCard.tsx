@@ -7,7 +7,7 @@ interface Appprops {
 
 }
 
-const ProductCard : React.FC<Appprops> = ({image , price , off , style })=>{
+const SpecialOfferCard : React.FC<Appprops> = ({image , price , off , style })=>{
   return (
     <div className={`w-[90%] h-fit pb-[1vw] sm:my-[1vw] my-[3vw] flex flex-col m-auto justify-between items-center bg-white border-2 ${style}`}>
       <div className="flex justify-center items-center">
@@ -26,4 +26,4 @@ const ProductCard : React.FC<Appprops> = ({image , price , off , style })=>{
   );
 }
 
-export default ProductCard;
+export default SpecialOfferCard;

@@ -24,14 +24,14 @@ module.exports = {
       main: "#FA9457"
       },fontSize:{
         link: "clamp(0.6em , 4vw , 1.2em)",
-        title: "clamp(0.8em , 5vw , 1.5em)",
+        title: "clamp(0.8em , 4vw , 1.5em)",
         default: "clamp(0.8em, 4vw , 1em)",
         hero: "clamp(2.5em,  10vw, 7em)",
         numbers: "clamp(0.5em , 1.2vw , 0.8em)",
         price: "clamp(0.5em , 1.2vw , 1em)",
         slider: "clamp(1em , 2.5vw , 3em)",
         contentTitle: "clamp(1.2em , 4vw , 3em)",
-        contentText: "clamp(1em , 3vw , 1.2em)"
+        contentText: "clamp(0.8em , 3vw , 1.2em)"
       },
     },
   },

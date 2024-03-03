@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import SpecialOffers from "./components/SpecialOffers";
-import ProductCard from "./components/SpecialOfferCard";
+import Contact from "./components/Contact";
 import { specialProducts } from "./products/specialProducts";
 import { mostSoldProduct } from "./products/mostSoldProduct";
 import Content  from "./components/Content";
@@ -19,8 +19,12 @@ function App() {
           <MostSold productList={mostSoldProduct} />
         </section>
         <section className="w-full">
-        <Content/>
-      </section>
+          <Content/>
+        </section>
+        <section>
+          <Contact/>
+        </section>
+
       </div>
       
     </div>
